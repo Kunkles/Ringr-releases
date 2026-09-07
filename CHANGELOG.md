@@ -5,6 +5,33 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.7.0 — 2026-09-07
+
+### Added
+- **Backup and restore.** A `.ringr` file holds the lenses, the images
+  they use and the collections they sit in. It is an ordinary zip, so it
+  can be renamed and opened by anything — the point of a backup is that
+  it outlives the app that wrote it. Double-clicking one opens Ringr.
+- **Collections export on their own** — one, several, or the whole
+  library, chosen in the export sheet. They carry their rings rather than
+  just naming them, so a collection arrives on somebody else's Mac as a
+  working set of lenses, and a lens in two of the chosen collections
+  travels once with both folders still naming it. Deliberately *without* the printer calibration: that is
+  a correction measured for one particular printer, and applying it to
+  someone else's would scale their rings by our feed error.
+- **Nothing is imported until you have seen what it would do.** The
+  preview says what is new, what is already there, what has changed since
+  the backup and what looks like a lens you already have — and each one
+  has a tick box, so a set can be taken in part. Images and collection
+  membership follow the ticks. Merge adds, Replace restores, both are one
+  Cmd-Z.
+- Images are matched by content rather than by id, so the same logo
+  arriving in two collections does not become two logos, each with its
+  own threshold.
+- **Make is a menu** of manufacturers, with the list editable. Renaming
+  one rewrites every lens carrying it, which is how "ARRI" and "Arri" —
+  two folders in a sidebar that groups by make — get merged back into one.
+
 ## 0.6.0 — 2026-09-07
 
 ### Added
