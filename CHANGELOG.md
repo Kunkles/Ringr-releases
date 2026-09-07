@@ -5,6 +5,43 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.6.0 — 2026-09-07
+
+### Added
+- **The walkthrough covers the whole app**, not just the core job. Six
+  new steps: the grouped, field-searchable list; collections; the
+  half-millimetre nudges, twenty-five undo steps and the delete
+  confirmation; placing text and logos on a ring; what the threshold
+  slider does to an imported logo; and what the printer is asked before
+  a job goes near it. Still drawn rather than screenshotted, so it
+  cannot go stale when a control moves.
+
+### Changed
+- The package, the executable and the source folder are called Ringr
+  too. The Application Support folder and the bundle identifier
+  deliberately keep the old name: one holds every measured lens, the
+  other holds the Bluetooth permission.
+- Builds now happen outside iCloud. The file provider re-stamped
+  `com.apple.FinderInfo` onto the bundle moments after it was cleared,
+  and codesign will not sign over it.
+
+### Fixed
+- **The test suite had not run in full for some time.** It aborted four
+  tests in, and the abort read as a pass. Behind it, ninety-nine tests
+  had not been running, and the accuracy tests that had been running
+  were measuring nothing: they scanned the edge of the tape the ticks
+  used to be on, found no ink, and every assertion that counted or
+  zipped its way through the empty result passed. The bands are derived
+  from the style now. The renderer was correct throughout — measured
+  directly, the ruler's numerals sit within 0.12 mm of their ticks.
+- **Releases were signed with the wrong certificate.** The identity was
+  picked by a regex alternation, which is not precedence: it took
+  whichever certificate the keychain listed first, and so ignored the
+  Developer ID one. codesign also ran with its output discarded, so a
+  failure left the linker's ad-hoc signature in place and looked built.
+- Ringr is notarised and stapled, so a download opens without warnings
+  and without a network.
+
 ## 0.5.0 — 2026-09-06
 
 Named **Ringr**, with an icon.
