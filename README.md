@@ -188,6 +188,50 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.9.0 — 2026-09-07
+
+#### Added
+- **The online lens database.** A section under the lens list that looks
+  up rings other people have measured — by serial first, because rental
+  houses re-rent the same glass and a ring off *this* lens is worth far
+  more than one off another copy of the model.
+- **Nothing arrives without being asked for, and nothing of yours leaves
+  unless you go and share it.** No upload on save, no prompt after
+  measuring. Sharing is its own action, and it is the claim that the ring
+  is right.
+- **A shared ring is never pasted in at its own numbers.** Where zero sits
+  depends on where that person stuck their tape and what they lined the
+  end line up against; the spacing between stops is what belongs to the
+  iris. So you pick a stop, say where it sits on your ring, and the rest
+  follows at the spacing they measured.
+- **A ring you already own gets a comparison instead**, lined up on the
+  first stop you both have and shown stop by stop. Not averaged — that
+  would invent a third ring nobody measured.
+- **An adopted ring is yours immediately**: its own id, edited freely, and
+  resharing it replaces *your* contribution rather than theirs. It keeps
+  a credit line saying whose measurement it began as, and the credit
+  stays with whoever measured it however many hands it passes through.
+- **An identity, not an account.** A key made on this Mac signs
+  everything you share, so a ring cannot be posted under somebody else's
+  name. Your display name sits beside its fingerprint — two people are
+  allowed to choose the same name — and changing it re-labels everything
+  you have ever shared, because a contribution records the key and not
+  the name.
+- **Unshare.** A ring shared before it was tested, or found wrong since,
+  can be taken back down. Signed, so only the identity that put one up
+  can remove it. Copies anybody already took stay where they are: that
+  ring became theirs when they adopted it, and reaching into somebody's
+  library to remove a lens they may be working with today would be worse
+  than leaving a bad one up.
+- **A ring knows which shared ring it is a version of** — the reference,
+  not a credit line, since a name can change and two people are allowed
+  to pick the same one. Recorded when a ring is adopted, when a working
+  copy is made of one already shared, and kept pointing at the original
+  through however many hands it passes.
+- Notes, overlays, style and printer calibration do not travel. A serial
+  plus a rental house plus a date says which lenses were on which job,
+  and a calibration is one machine's feed error.
+
 ### 0.8.1 — 2026-09-07
 
 #### Fixed
