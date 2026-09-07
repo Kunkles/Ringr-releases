@@ -174,7 +174,7 @@ ring can say whose glass it is. No affiliation or endorsement.
 
 ## Beer
 
-Made by a 1st AC who got tired of retyping numbers into P-touch Editor.
+Made by a DIT who got tired of retyping numbers into P-touch Editor.
 Ringr is free and always will be. If it saved you an hour at the bench,
 and you feel like it, the next one's on you —
 [venmo.com/u/Ryan-Kunkleman-1](https://venmo.com/u/Ryan-Kunkleman-1).
