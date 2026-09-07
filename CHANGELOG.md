@@ -5,6 +5,20 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.9.1 — 2026-09-07
+
+### Fixed
+- The two buttons in the Online Lens Database header jumped as the
+  pointer arrived. A sidebar section header carries a collapse control
+  that AppKit draws on hover at the trailing edge — exactly where they
+  were — and it reflows the header rather than overlaying it, so holding
+  its width open moved them twice instead of not at all. The title is an
+  ordinary row now, and there is no section header for anything to
+  appear in.
+- "Measured by" printed a bare "1" beside "3 people", so the one number
+  that says whether a ring has been corroborated read as a different
+  kind of number. One person, three people.
+
 ## 0.9.0 — 2026-09-07
 
 ### Added
