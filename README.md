@@ -188,6 +188,38 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.8.1 — 2026-09-07
+
+#### Fixed
+- **Ringr now runs on Intel Macs.** Every release until this one was
+  built for Apple silicon only, because that is what it was built on and
+  nothing said otherwise. On an Intel Mac such an app does not merely
+  refuse to start — macOS reports it as *damaged, move it to the Trash*,
+  which reads as a broken download rather than the wrong architecture.
+  Builds are universal now, and a release that is missing either slice
+  is refused before it can be published.
+
+### 0.8.0 — 2026-09-07
+
+#### Added
+- **Ringr checks for a newer release.** Once when it opens, and every
+  couple of days after that if it is left running — it lives on a cart
+  for a week at a time. Until now a copy downloaded in September would
+  have stayed on that version forever, because the only place a new one
+  is announced is a page nobody revisits.
+- The notice appears **only when there is something newer**: no
+  interruption to say nothing has changed, and a failed check on a
+  location with no signal is silence rather than an alert. *Check for
+  Updates* in the Ringr menu answers either way, since a check you asked
+  for should say something.
+- **Skip This Version** stops it mentioning that release again while
+  still offering later ones, and *Check Automatically* turns the whole
+  thing off. The check sends nothing but the request — no identifier,
+  nothing about the library or the machine.
+- Ringr does not install anything. It opens the release page; you drag
+  the new one into Applications over the old, and your lenses, images
+  and collections are untouched.
+
 ### 0.7.0 — 2026-09-07
 
 #### Added
