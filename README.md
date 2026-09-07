@@ -188,6 +188,43 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.10.0 — 2026-09-07
+
+#### Added
+- **"This ring printed and matched."** The strongest thing anybody can
+  say about a measurement they did not take, and the only claim in the
+  shared database that is not itself another measurement. Signed, one per
+  person per ring, and never your own — vouching for your own
+  contribution is a claim about a ring by the only person already known
+  to believe it.
+- Confirmed counts show wherever a ring is being judged: a column in the
+  browse window and a line on the ring itself.
+
+- **Shared collections.** A set somebody assembled — "the Cooke S4s at
+  Panavision Woodland Hills" is a day of work that should not have to be
+  repeated by the next person on that stage. Sharing one puts its lenses
+  up as rings in their own right first, because a collection is
+  membership and nothing else. Browse them under Collections in the
+  browse window; taking one brings its rings in and makes a collection of
+  your own holding them.
+- Membership stays a **reference, not a copy**. A ring belongs to whoever
+  measured it: withdraw it and it leaves every collection naming it,
+  rather than living on where nobody can take it down.
+- A shared collection is **marked in the sidebar** — coloured, badged and
+  labelled "(shared)" — because being public is worth seeing without
+  opening a menu.
+- **Add Lens** is a proper button at the top of the sidebar rather than a
+  small one at the bottom.
+
+#### Changed
+- Deliberately **not** a rating. An average over two people means very
+  little, and a low score would be ambiguous in the way that matters
+  here: a ring that does not match your lens may be a bad ring, or your
+  32 mm may simply not be their 32 mm. So there is no negative, and a
+  ring nobody has confirmed shows a dash rather than a zero — nobody has
+  said it is right yet, which is not the same as somebody saying it is
+  wrong.
+
 ### 0.9.1 — 2026-09-07
 
 #### Fixed
