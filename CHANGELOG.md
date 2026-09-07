@@ -1,0 +1,115 @@
+# Changelog
+
+Ringr prints marking rings for Preston iris hand units.
+
+Versions are dated from the work, not from releases — this has been in
+daily use since the first one. The build number is the commit count.
+
+## 0.5.0 — 2026-09-06
+
+Named **Ringr**, with an icon.
+
+### Added
+- **Collections.** Named sets of lenses — a DP's kit, a job — built by
+  dragging lenses onto a folder. Membership only: a lens in a collection
+  is the same lens as the one still grouped under its make, can be in
+  several at once, and is untouched when a collection is deleted.
+- **Motor** field, recording which motor a ring's marks were taken
+  against, since tooth pitch differs a little between makers.
+- **Grouped, searchable lens list.** Make, then Type, then Model, with
+  focal lengths sorted as numbers so a set reads 21, 35, 100. Search can
+  be aimed at one field, which matters when "Prime" is a type on one lens
+  and part of a model name on another.
+- **Undo and redo**, 25 steps, on Cmd-Z and in the toolbar.
+- **Delete confirmation**, saying how many measured marks are about to go.
+- **Animated walkthrough**, in the Help menu and on launch until told
+  otherwise. Opens with the two things that cost tape if missed: 18 mm
+  tape, and that a ring marked against one motor reads slightly off
+  against another.
+- **Model** and **Format** fields, and Type as a dropdown.
+- Half-millimetre nudge arrows on each mark.
+- Version and build number, from one place in the source.
+
+### Changed
+- Lenses and rings merged into one list. A ring is only ever the marks of
+  one lens, so keeping two lists let a ring point at the wrong lens or at
+  none.
+- Preview stands on end, so the numerals — which are turned a quarter
+  turn on the tape — read the right way up.
+- Preview zoom runs from the whole strip to 3x, opening a third along.
+- Ticks and numerals moved to the far edge of the tape.
+- Ring circumference is one remembered number, 207 mm, sizing both the
+  ruler and the ring strip.
+- Fine mode (180 x 360 dpi) by default, with a check that catches a
+  printer ignoring it.
+
+### Fixed
+- **Crash** when a text field finished editing after its row was deleted.
+  Marks were addressed by array position; they are addressed by identity
+  now, which also stops an edit landing on the wrong mark after a sort.
+- **Undo appearing to do nothing** after adding a mark and deleting it.
+  Both were named the same and folded into one step, which restored the
+  state already on screen.
+- **Cmd-Z ignored** immediately after a change — a focused text field
+  keeps its own undo, and menu items validate lazily.
+- The Bluetooth permission prompt returning on every launch: the app is
+  signed with a development certificate rather than ad-hoc, so its
+  identity survives a rebuild.
+
+## 0.4.0 — 2026-09-05
+
+### Added
+- **The ruler is printed by the app.** Both strips now come off the same
+  printer at the same scale, so the printer's feed error lands on each
+  equally and cancels — a stop marked at 47 on the ruler prints at 47 on
+  the ring, calibrated or not.
+- Full-width datum line at each end of both strips, to register and cut
+  against.
+- Calibration strip and per-printer feed correction.
+- Printers panel: what is here, what tape it holds, and remove.
+- Low battery is refused before tape is spent, with the option to go
+  ahead. A low battery warning halts the printer mid-job, which is why a
+  ring once printed without cutting.
+
+### Fixed
+- **Jobs hanging on "Receiving, please wait".** The whole job went out in
+  ninety milliseconds while the tape takes eight seconds; anything past
+  the printer's buffer was lost and it waited forever for lines it had
+  been promised. Raster is now fed at the speed it prints.
+- **A silent printer reported as a successful print.** Writes to a paired
+  but sleeping printer are accepted and discarded, and the status read was
+  wrapped in `try?`, so the job vanished and the app said it had printed.
+- Completion is confirmed by polling the phase byte, since this printer
+  sends no automatic status at all.
+
+## 0.3.0 — 2026-09-05
+
+### Changed
+- **Bluetooth goes over IOBluetooth RFCOMM.** The `/dev/cu.*` serial node
+  never carried a byte to this printer — it exists for any paired device,
+  accepts writes and discards them, connected or not. Tested directly:
+  still discarded after the baseband link was up and the device reported
+  connected.
+- Replies are waited for where they arrive. IOBluetooth delivers channel
+  data on the main run loop, not the thread that opened the channel: the
+  same request that timed out after 26 s came back in 1.3 s once the main
+  loop was kept turning.
+
+## 0.2.0 — 2026-09-04
+
+### Added
+- macOS app: lens list, marks table, live preview, printing.
+- USB support by way of a raw CUPS queue — untested, and write-only, so
+  it loses the tape check and the battery guard. See `Docs/usb-testing.md`.
+
+## 0.1.0 — 2026-09-04
+
+### Added
+- RingKit: marks, layout, and the Brother raster protocol.
+- **Ticks are stamped at whole-dot positions.** A 0.8 mm tick is 5.67
+  dots at 180 dpi, and anti-aliasing a fractional-width bar then
+  thresholding it leaned every mark 0.088 mm the same way — far too small
+  to see, quite large enough to matter.
+- 18 mm tape geometry from Brother's raster reference: 128 pins, 16 bytes
+  a line, 8 dots of offset and 112 printable, on exact byte boundaries.
+- PackBits verified against the manual's own worked example.
