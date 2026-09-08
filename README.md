@@ -188,6 +188,36 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.11.0 — 2026-09-08
+
+#### Added
+- **The shared database is kept on this Mac.** A signed ring is about
+  three hundred bytes, so the whole thing fits locally with room to
+  spare. It is fetched on launch and whenever you press refresh, which
+  says how old the copy is.
+- **Shared lenses are listed, not searched for.** Filed by make, then
+  type, then model, exactly like your own — the box at the top narrows
+  the tree rather than being a search you have to run. Nothing to wait
+  for; it is a copy on this Mac, so it works on a cart with no signal.
+- **A lens you own says when somebody else has measured it**, right in
+  the list. That is the difference between a feature you have to remember
+  and one that tells you.
+- Taking a shared ring asks the server about that ring first. A local
+  copy cannot know about a withdrawal — a retraction is an absence, not a
+  record — so a stale copy would otherwise go on offering exactly the
+  ring somebody had already pulled.
+
+#### Changed
+- Groups start collapsed, in both lists, and open again while you are
+  searching. A search that leaves its answer inside a closed folder is
+  worse than a list that was too long.
+- **The walkthrough opens once, on the first run**, and then only from
+  the Help menu. It used to open every launch until somebody ticked a box
+  to stop it.
+- New icon: a hand unit with a marked ring on the motor. It keeps a
+  silhouette at the sizes the Dock actually uses, which the wordmark
+  never did.
+
 ### 0.10.4 — 2026-09-07
 
 #### Fixed
