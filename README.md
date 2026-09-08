@@ -188,6 +188,51 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.13.0 — 2026-09-08
+
+#### Fixed
+- **The logo printed.** It appeared in the preview and came off the
+  machine blank: the printer built its own renderer and left the overlay
+  images out of it. Text overlays were fine, which is what made it look
+  like an image problem rather than a missing argument. There is one
+  renderer now, and the preview and the printer both use it — two call
+  sites building the same thing are two chances to leave something out,
+  and only one of them tells you.
+- **A second label prints without power-cycling the printer.** After
+  sending a job the app slept a second and then asked "have you
+  finished?" every couple of seconds for twenty seconds. Measured on a
+  nine-millimetre label: fifteen requests, no reply to any, and the
+  printer would not answer the *next* job either. Being talked at while
+  it feeds and cuts leaves it deaf. It now waits out the tape and the
+  cutter and asks twice, quietly.
+- The link is handed back properly when a job ends, and the app waits for
+  it to be gone rather than assuming. If the channel still refuses, the
+  link underneath is rebuilt rather than the channel retried on top of
+  it.
+- **A whole row in the lens list is clickable.** The tree was built from
+  nested disclosure groups, so every lens sat inside a container that
+  indented it, and the row highlighted was not the view being clicked.
+  The tree is flat rows now, with the indent drawn inside them.
+- The marks table follows you to the bottom instead of leaving a new mark
+  off the end of the list.
+- Angénieux has its accent back in the image library. Its file had to
+  lose one — a non-ASCII name inside a signed bundle breaks the
+  signature — but what an image is called is not what it is named on
+  disk.
+
+#### Added
+- **Add Next in Set.** Entering a set is the same five fields over and
+  over with two changing: make, model, type, format, motor and the ring's
+  style come across, and focal length, serial and marks do not.
+  Deliberately not a duplicate — a set of rings all carrying the first
+  lens's measurements would look right and be wrong on every lens but
+  one.
+- The Caldwell logo.
+- A record of what the Bluetooth link does, written to
+  `~/Library/Caches/ringr-bluetooth.log`. Five fixes went in on argument
+  alone before this existed and none of them were the fault; one made it
+  worse.
+
 ### 0.12.0 — 2026-09-08
 
 #### Added
