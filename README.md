@@ -188,6 +188,31 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.10.2 — 2026-09-07
+
+#### Fixed
+- **"Ringr is damaged and can't be opened."** Reported by somebody who
+  had seen it before and knew why, which is the only reason it was found.
+
+  macOS stores extended attributes, and a zip carries them as AppleDouble
+  side files — `._Ringr`, `._CodeResources`. Every release so far wrote
+  those *inside* the bundle's own paths. `ditto -x` puts them back where
+  they belong and everything is fine; Finder's Archive Utility, The
+  Unarchiver, Keka and plain `unzip` write them out as real files inside
+  the app, and a file the signature does not know about breaks the seal.
+  What the downloader sees is that the app is damaged and should be
+  binned.
+
+  Downloads are now zipped from a staged copy with its attributes
+  stripped and the rest sequestered beside the bundle rather than in it.
+
+  Every check before this used `ditto` to extract, which reassembles
+  those files and so passes on an archive that breaks for anybody using
+  anything else. Releasing now extracts with plain `unzip` and refuses to
+  publish if a single stray file lands inside the bundle or the
+  signature stops verifying. Testing with the friendliest possible tool
+  is how this shipped four times while every check said it was fine.
+
 ### 0.10.1 — 2026-09-07
 
 #### Added
