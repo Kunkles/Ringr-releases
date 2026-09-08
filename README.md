@@ -188,6 +188,21 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.10.3 — 2026-09-07
+
+#### Changed
+- New icon, drawn larger in its frame so it holds together at the sizes
+  the Dock and Finder actually use.
+
+#### Added
+- **Every release is now checked after it is published**, not only after
+  it is built. The file GitHub serves is downloaded, extracted with plain
+  `unzip`, and refused if a stray file lands inside the bundle, the
+  signature stops verifying, Gatekeeper says no, the ticket is missing,
+  either architecture is absent, or the version inside disagrees with the
+  tag. A local archive that passes proves the build, not what came back
+  down the wire.
+
 ### 0.10.2 — 2026-09-07
 
 #### Fixed
