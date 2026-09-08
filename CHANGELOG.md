@@ -5,6 +5,38 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.12.0 — 2026-09-08
+
+### Added
+- **Images can be turned**, in eighths of a turn, on a slider beside the
+  size. Anything finer is a nudge nobody asked for on a strip 15.8 mm
+  across, where a logo three degrees off reads as a mistake rather than a
+  choice.
+- **A shared lens keeps its type.** Every shared ring had been filing
+  itself under a folder called "—", because the payload never carried
+  one. Type and format travel now.
+- **A standard for sharing, not for existing.** A ring goes up with
+  marks, make, model, focal length, type and motor, or not at all —
+  somebody downloading it cannot ask you what it was. Motor is on the
+  list because it is the one field that changes what the numbers mean.
+  Serial is not: plenty of lenses turn up without a legible one, and
+  losing real measurements to a formality is the wrong trade. Your own
+  list stays exactly as forgiving as it was.
+- **A shared lens says when the copy up there has fallen behind** the one
+  here. A shared ring is a signed snapshot and cannot follow later edits,
+  which was right and also invisible.
+
+### Fixed
+- **A turned image was being cut off.** The box was sized from the
+  unrotated picture and the picture turned inside it, so at anything but
+  a quarter turn the corners went outside it. The turn also now happens
+  in millimetres before anything maps to dots — dots are not square at
+  180 × 360, so turning in dot space sheared a logo on the way round.
+- A grouping level nobody filled in is no longer a level. Where every
+  lens at a step leaves the field blank, the step is skipped rather than
+  showing an empty folder — but only when *all* of them are blank, or an
+  unmarked lens would appear to be a prime.
+
 ## 0.11.0 — 2026-09-08
 
 ### Added
