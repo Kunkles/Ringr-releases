@@ -5,6 +5,29 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.10.4 — 2026-09-07
+
+### Fixed
+- **"Ringr is damaged and can't be opened", the other cause.** Found by
+  the same person who spotted the first one, still seeing it after that
+  was fixed — because this was a second, unrelated fault behind it.
+
+  One bundled logo was named `Angénieux.png`. macOS stores that name
+  decomposed — `e` plus a combining acute — while the zip carried it
+  composed, as a single `é`. Archive Utility, which is what double-clicking
+  a download uses, writes it back decomposed. The signature had sealed the
+  composed form, so codesign reported the same file both added and
+  missing, and the seal broke. Same name on screen; different bytes.
+
+  The file is plain ASCII now. It is still called Angénieux in the image
+  library, because what an image is *called* is data, while what it is
+  *named on disk* has to survive being unzipped by four different tools.
+  Accents are folded when matching starter images, so anybody who already
+  had it keeps the one they have rather than acquiring a second.
+
+  Releasing now refuses to publish if any name inside the bundle is not
+  plain ASCII.
+
 ## 0.10.3 — 2026-09-07
 
 ### Changed
