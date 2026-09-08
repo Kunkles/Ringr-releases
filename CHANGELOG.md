@@ -5,6 +5,17 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.10.1 — 2026-09-07
+
+### Added
+- **Ringr asks what to call you** on the first launch that has no name.
+  The name beside a shared ring is the one part of this app other people
+  read, and it was set in a panel nobody had a reason to open — so the
+  likely outcome was a database full of Anonymous. Never on top of the
+  walkthrough, and "Not now" means this launch, not never.
+- **Your name is in the toolbar**, reading "Set a name" until there is
+  one. Clicking it opens the identity panel either way.
+
 ## 0.10.0 — 2026-09-07
 
 ### Added
