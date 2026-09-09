@@ -188,6 +188,21 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.13.3 — 2026-09-09
+
+#### Changed
+- **Every button whose label is a glyph and nothing else now says what it
+  does** when you rest on it: clearing either search box, taking an
+  overlay off a ring, removing a mark, and the overlay chips, whose
+  selection is a toggle that a chip does not look like.
+- The buttons that already say what they do say **how to reach them**
+  instead — Add Lens, Add Next in Set, Add Mark. A shortcut nobody can
+  find is a shortcut nobody has. Check Tape and Print Ring say what they
+  will do rather than restating their own labels.
+- **"Add Next in Set" looks like a button.** Borderless and caption
+  sized, it read as a note about the button above it. It is bordered and
+  full width now, under the prominent one and plainly secondary to it.
+
 ### 0.13.2 — 2026-09-08
 
 #### Added
