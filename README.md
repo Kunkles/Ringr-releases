@@ -188,6 +188,49 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.13.2 — 2026-09-08
+
+#### Added
+- **A list view of your own library**, next to the titles of both
+  Collections and All Lenses — the window the shared database already
+  had, pointed at your own shelf. The sidebar files lenses by make and
+  model, which is right for finding one you can already name and wrong
+  for every other question: which of these still has no type on it,
+  which went up before the marks were checked, what is actually in that
+  set. Sortable columns, because those questions are all orderings. Tick
+  rows to file several into a collection at once; double-click a lens to
+  open it, or a set to see what is in it.
+
+#### Changed
+- Section titles in the sidebar, and the buttons beside them, are twice
+  the size they were, and now come from one place — three sections had
+  been carrying their own sizes in three files and had already drifted.
+- The shared section is called **Online Lenses**. At the new size the old
+  name did not fit beside its three buttons: measured, it wants 199
+  points in a space with 148, and came out as "Online Le…". Named for
+  what it lists rather than what it lists from.
+
+#### Fixed
+- **The Keychain question is answered by Ringr rather than by the
+  system.** A Mac with no default Keychain is unusual but not
+  impossible, and on one the first attempt to store an identity handed
+  the problem to macOS, which put up its own alert — "a keychain cannot
+  be found to store contributor" — offering **Reset To Defaults**. A
+  destructive button, on a first run, about a keychain, with no
+  explanation of what it would reset, and the app sat behind it with no
+  window. Ringr asks first now, without letting anything on screen, and
+  explains it in its own words. A merely locked Keychain still asks to be
+  unlocked, which is the one time prompting is right.
+- **Sharing says why it cannot.** All four signing actions used to give
+  up in silence when there was no identity — press Share, nothing
+  happens, no reason. On a Mac with no Keychain that was the whole
+  experience of trying to share.
+- **Counts read as English.** `^[9 lens](inflect: true)` is read where the
+  literal is written, so five alert messages, the adopt sheet and the
+  shared browser's footer were printing the markup exactly as typed
+  rather than "9 lenses". One of them hid a second fault: it would have
+  said "2 lenses is short of something" even had the markup worked.
+
 ### 0.13.1 — 2026-09-08
 
 #### Fixed
