@@ -5,6 +5,26 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.13.1 — 2026-09-08
+
+### Fixed
+- **The walkthrough stays where it is put.** On one machine the whole
+  first-run panel drifted around under an animation meant for a drawing
+  inside it — "like the dvd player screen saver bouncing on the corners".
+  The illustrations loop by sweeping a value from nought to one, and that
+  sweep was animated into place with `withAnimation` from `onAppear`.
+  `withAnimation` sets the animation for the entire update, not the part
+  that asked for it, and `onAppear` arrives while the sheet is still
+  working out where its own contents go. Lose that race and the panel's
+  layout is caught by the same animation — which, being set to repeat for
+  ever, never finishes. The content spent the whole time travelling
+  toward where it belonged and never got there. Whether you lose the race
+  is a matter of timing, which is why it appeared for one person and
+  never on the machine it was written on. The sweep is read off a clock
+  now, so there is no animation to be caught by.
+- Illustrations are clipped to their card, so nothing one of them draws
+  can end up outside the box it belongs in.
+
 ## 0.13.0 — 2026-09-08
 
 ### Fixed
