@@ -5,6 +5,49 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.13.5 — 2026-09-09
+
+From an outside QA pass over the whole codebase. Two of these lose data.
+
+### Fixed
+- **A library that will not load no longer becomes an empty one that
+  saves.** If `library.json` failed to decode for any reason, Ringr
+  started empty — and the first write of the launch, seeding the starter
+  logos, saved that empty library over the top of the file it could not
+  read. Every measured lens was gone and the app looked freshly
+  installed. The unreadable file is now moved aside as
+  `library-damaged-<date>.json` before anything is written, you are told
+  where it went, and if it cannot even be moved then Ringr refuses to
+  save at all until somebody has looked. There is a rolling
+  `library.json.bak` behind every save as well, which turns this whole
+  class of failure into "lost the last edit".
+- **Restoring a backup keeps its logos.** A restore matches images by
+  what they contain, so a logo already on the new Mac is recognised
+  rather than duplicated, and every ring is pointed at the copy that is
+  there. The list of images was not following the rings through that
+  step, so the two ended up naming different things and every logo
+  overlay in a restored library came back blank. This is what "new Mac,
+  restore my backup" did, every time, because the bundled logos are
+  seeded per machine.
+- **A new bundled logo cannot overwrite one of yours.** Seeding matched
+  existing images by substring, so an image you had named after the same
+  maker — "Hawk V-Lite sticker" contains "hawk" — would have been
+  replaced by ours the first time a release shipped a new starter file.
+- **Sharing a collection remembers which lenses went up** even when the
+  collection itself fails to upload. They were on the server with the
+  library unaware, so there was no way to see them and no way to take
+  them down.
+- **Exporting no longer deletes the old backup before writing the new
+  one.** It is built beside it and moved into place, so a failure costs
+  nothing. Overwriting yesterday's backup is what backups are for.
+- **A library survives a field it has never seen.** Marks — and the
+  library itself — required every field they knew about, so the next one
+  added would have failed to decode every library already measured, and
+  the bug above would then have erased them.
+
+### Changed
+- The ruler sheet no longer says "plus 0 mm to lap over the seam".
+
 ## 0.13.4 — 2026-09-09
 
 ### Changed
