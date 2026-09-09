@@ -188,6 +188,15 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.13.4 — 2026-09-09
+
+#### Changed
+- **One way to make a collection, not two.** The bar along the bottom of
+  the sidebar carried a New Collection button that did exactly what the +
+  beside the Collections title does, two rows above it — same action,
+  same prompt. The bar keeps what it was really for, the number of
+  lenses, which now says so in words.
+
 ### 0.13.3 — 2026-09-09
 
 #### Changed
