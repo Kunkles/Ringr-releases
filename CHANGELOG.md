@@ -5,6 +5,19 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.13.6 — 2026-09-09
+
+### Changed
+- **Add Text and Add Image start at the top of the tape**, however many
+  stops the ring has. A new overlay used to go in the widest clear run
+  between stops, which on a long ring can be anywhere — measured on a
+  ring with stops every six millimetres to ninety and one at two hundred,
+  it landed at 145 mm, far past anything the preview was showing. Add
+  Text looked like it had done nothing. It now goes fifteen millimetres
+  in, using a clear run near the top when there is one and sitting over a
+  stop when there is not. The ring still says which stops an overlay is
+  printing over, and "Move to widest gap" is there for the old placement.
+
 ## 0.13.5 — 2026-09-09
 
 From an outside QA pass over the whole codebase. Two of these lose data.
