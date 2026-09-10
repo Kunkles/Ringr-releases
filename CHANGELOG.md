@@ -5,6 +5,32 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.3 — 2026-09-10
+
+### Added
+- **Type down a column in the browse window.** A padlock in the header
+  turns the lens list into something you can fill in: serial, motor,
+  close focus, and type and format together in one menu. It is where you
+  notice a field is blank across the whole shelf, so it should be where
+  you fix it — close focus in particular, which until now meant opening
+  each lens in turn.
+
+  A mode rather than always-on editing, because the table has already
+  spent its clicks: one selects a row and two open the lens. While it is
+  unlocked, double-click belongs to the word under the caret and Return
+  commits the cell instead of closing the window. It starts locked every
+  time. The lens name stays read-only — it is three fields and it is how
+  you know which row you are on.
+
+### Fixed
+- **Typing in a close focus asks you to share the lens again.** It
+  travelled with a contribution but was not compared against the copy
+  already published, so filling one in never turned the ring orange and
+  the blank version stayed in the shared database for good. That
+  comparison now lives in RingKit with a case for every field that
+  travels, so the next one added and forgotten fails a test rather than a
+  database.
+
 ## 0.15.2 — 2026-09-10
 
 ### Added
