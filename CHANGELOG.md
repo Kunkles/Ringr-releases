@@ -5,6 +5,26 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.14.1 — 2026-09-09
+
+### Added
+- **The stop series can lay in the ticks between the stops.** A Preston
+  is marked in thirds as often as not, and every one of those tick rows
+  had to be added by hand. Each series now offers *Stops Only*, *With
+  Half-Stop Ticks* or *With Third-Stop Ticks*. Like the stop positions
+  they are a scaffold — rows to type your readings into, evenly spaced so
+  they come out in the right order with room between them.
+
+### Changed
+- **The Sort button is gone, and the marks keep themselves in order.** It
+  sorted the rows by position, which the printed strip never depended on
+  and which was almost always already true — marks are added at the end,
+  and the series lays them in ascending. The one time the order does
+  drift is typing a smaller number into a row already down the list, and
+  that is exactly when nobody thinks to press a button for it. The list
+  puts itself right when you finish editing, without moving a row out
+  from under the cursor.
+
 ## 0.14.0 — 2026-09-09
 
 ### Added
