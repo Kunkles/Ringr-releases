@@ -5,6 +5,34 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.2 — 2026-09-10
+
+### Added
+- **Share the lenses you have ticked.** The browse window could already
+  tick rows and file them into a collection; the one thing it could not
+  do with a handful of lenses was publish them, which meant opening each
+  in turn. Now there is a Share button on the same ticks. Each lens still
+  goes up as its own signed contribution, but you are asked once — how
+  many are new, how many replace a copy already up there — and told once
+  at the end, by name, if anything did not go. Lenses short of what a
+  shared ring needs are counted out rather than uploaded half-filled.
+
+### Changed
+- **The lens list shows the iris and the close focus instead of the mark
+  count and the tape width.** Marks was a number you already trust, and a
+  lens with none is caught by "not ready to share" in the same window.
+  Tape has said 18 mm on every row since the width stopped being a
+  choice. Iris is read off the marks, so it cannot drift from them; close
+  focus is shown as engraved.
+
+### Fixed
+- **Three buttons no longer offer to add "1 Len".** Inflection reads the
+  noun it is given, and a capitalised one defeats it: `1 Lens` came out
+  "1 Len" and `2 Lens` came out "2 Lens", wrong in both directions where
+  the same markup on a lowercase word is right in both. The three
+  title-case buttons — filing, adopting and importing — say their own
+  plural now.
+
 ## 0.15.1 — 2026-09-10
 
 ### Added
