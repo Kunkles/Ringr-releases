@@ -188,6 +188,19 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.4 — 2026-09-10
+
+#### Added
+- **Delete and duplicate in the browse window.** Right-click a row for
+  both — that is about the row under the pointer, and duplicating is
+  nearly always one lens. Ticked rows get their own Delete in the
+  footer, because clearing out six at once is what the ticks are for.
+
+  Either way it is one undo step for the lot. The dialog says how many
+  measured marks go with it and that undo brings them back, and it says
+  what does not go: a lens in the shared database stays there. Deleting
+  your own copy of a contribution is not a retraction — unshare is.
+
 ### 0.15.3 — 2026-09-10
 
 #### Added
