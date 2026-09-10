@@ -188,6 +188,31 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.14.3 — 2026-09-09
+
+#### Changed
+- **One tape width.** The picker offered all six the printer supports,
+  which is a list of what the machine can hold rather than what a ring
+  wants: 18 mm matches the ring face, 24 hangs over the edges, and 12
+  leaves bare metal and costs numeral height worth having on a dark
+  stage. It is a fixed label now, and any ring stored under another width
+  is put on 18 mm when the library loads.
+
+#### Added
+- **Print onto the wrong tape when that is all there is.** Out of 18 mm at
+  five in the morning is a real situation, and refusing outright meant no
+  ring at all. The refusal now offers **Print Anyway**, once, for that
+  job — it is not remembered.
+
+  The strip still comes out at 18 mm, so the stops land where the ruler
+  said they would: they run along the tape, and how wide the tape is has
+  nothing to do with it. A line prints down each long edge of the strip;
+  cut along whichever one has tape outside it and you have an 18 mm ring.
+
+  Check the first one before you trust it to a lens. The lines are where
+  the arithmetic says they should be, but what comes out on 24 mm stock
+  has not been printed yet.
+
 ### 0.14.2 — 2026-09-09
 
 #### Changed
