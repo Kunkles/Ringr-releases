@@ -5,6 +5,44 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.14.0 — 2026-09-09
+
+### Added
+- **Rings can twist the other way.** Some DPs want the iris closing down
+  counter-clockwise. **Twist** sits on the main row beside Type, Format
+  and Motor: *Normal* is a Preston as it comes, *Reversed* lays the same
+  measurements out mirrored, so a stop read at 47 mm prints at
+  (circumference − 47). Nothing about the measuring changes — you read the
+  lens against the ruler exactly as before — and the numerals stay
+  upright. What changes is the order the stops come in as the barrel
+  turns, which is the whole point.
+
+  The ruler follows, and says so. Marking a reversed ring against a normal
+  ruler puts every stop on backwards and the two strips look identical on
+  the bench, so changing the twist warns you there and then, and a ruler
+  printed for the other twist is called out ahead of the printer and
+  calibration warnings.
+
+  It travels with a contribution too. The shared database shows it in all
+  three places you meet a ring — a column in the browser, a flag on the
+  row in the sidebar, and a line in the sheet you decide from — and
+  adopting a ring keeps the twist it was measured with rather than
+  applying yours.
+
+### Changed
+- The preview goes to whichever end of the tape the ring begins at.
+  Reversing moves every stop to the far end, so staying at the top would
+  leave you looking at blank tape.
+
+### Fixed
+- **A lens with nothing on it can be deleted.** Lenses are filed by make,
+  then type, then model; one with none of them fell into the blank group
+  at the bottom, one fold down, where the row is a folder rather than a
+  lens — and a folder has no menu to delete from. A lens with nothing to
+  group by is now a row of its own at the top of the list. **Delete
+  Lens** joins the File menu on ⌘⌫ as well, acting on whatever is
+  selected.
+
 ## 0.13.6 — 2026-09-09
 
 ### Changed
