@@ -5,8 +5,8 @@ positions you measured, and it prints the ring — numerals turned a
 quarter turn, ticks on the edge, cut lines at both ends — straight to a
 Brother P-touch.
 
-**[Download the latest release](../../releases/latest)** · macOS 14 or
-later · free
+**[Download Ringr](../../releases/latest/download/Ringr.zip)** · macOS 14
+or later · free · [all releases](../../releases/latest)
 
 ---
 
@@ -125,7 +125,8 @@ Help menu.
 
 ## Installing
 
-Download the zip from **[Releases](../../releases/latest)**, unzip it,
+Download **[Ringr.zip](../../releases/latest/download/Ringr.zip)** — that
+link always points at the newest build — unzip it,
 drag **Ringr** to your Applications folder, and open it. macOS will ask
 for Bluetooth the first time; that is the printer.
 
@@ -187,6 +188,33 @@ Ringr prints marking rings for Preston iris hand units.
 
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
+
+### 0.15.5 — 2026-09-10
+
+#### Added
+- **Ringr asks before it talks to anything.** A page of the walkthrough
+  names the two places it reaches — GitHub, to see whether there is a
+  newer version, and the shared lens database — says what each is for,
+  and carries a switch for both. Until that page has been through,
+  nothing connects at all: a first launch opens no sockets. Neither
+  place is told who you are, and nothing about your lenses leaves the
+  Mac unless you share a ring on purpose. The shared-database switch
+  now sits in the Ringr menu beside the update one.
+
+#### Changed
+- **Both browsers measure their columns instead of guessing them.**
+  Widths come from what is actually in the column, so a serial, a date
+  or a lens name no longer clips because the constant was picked before
+  that value existed. The lens name takes the room it needs; the
+  collection or the contributor gives way when the window is narrow.
+- One download link that keeps working:
+  `releases/latest/download/Ringr.zip` always fetches the newest build,
+  rather than landing you on a page to go looking.
+
+#### Fixed
+- The first page of the walkthrough no longer runs down through the
+  divider and into the buttons. The text area was a fixed height that
+  the opening paragraph and its caution overran.
 
 ### 0.15.4 — 2026-09-10
 
