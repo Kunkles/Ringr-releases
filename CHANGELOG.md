@@ -5,6 +5,20 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.14.2 — 2026-09-09
+
+### Changed
+- **Sharing says when it was shared.** The shared database now refuses a
+  contribution older than the one it already holds — which is what stops
+  a copy of your ring, captured off the wire, being posted back to undo a
+  correction or bring a withdrawn ring back. Both signed payloads carry
+  the moment of sharing so the database has something honest to compare.
+  Nothing shared before this stops working.
+- **"Already up to date" is no longer reported as a failure.** If the
+  database is holding something at least as new as what was just sent,
+  the ring you pressed Share for is shared, and saying otherwise was
+  simply wrong.
+
 ## 0.14.1 — 2026-09-09
 
 ### Added
