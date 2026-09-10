@@ -5,6 +5,22 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.14.4 — 2026-09-09
+
+### Fixed
+- **Rings you have already shared stop saying they are out of date.**
+  Adding the twist and the moment-of-sharing to a contribution made every
+  ring already up read as behind, overnight, without anybody touching
+  one. What is compared now is the measurement — the lens, the motor, the
+  circumference, the twist, the marks — rather than the bytes around it.
+- **Updating a shared ring clears it.** The flag is worked out against
+  this Mac's copy of the shared database, and nothing refreshed that copy
+  after an upload, so an update went up and then went on saying it was
+  behind.
+- **Updating says it is an update.** Publishing a ring nobody has seen
+  and correcting one people may already have taken are different things,
+  and the confirmation said the same words for both.
+
 ## 0.14.3 — 2026-09-09
 
 ### Changed
