@@ -5,6 +5,27 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.0 — 2026-09-10
+
+### Added
+- **Lens cards for a set.** Right-click a collection and choose Lens
+  Cards: a PDF of the whole set on a business card, twelve to a Letter
+  sheet, to cut up and hand round. A ruled table with the focal lengths,
+  how close each one focuses and how wide it opens — primes first, zooms
+  at the end, sorted as numbers so a set reads 25, 32, 100. The
+  collection's name goes at the top, so naming it for the show names the
+  cards.
+
+  The widest stop is read off the marks, which already know it. Close
+  focus is a new field beside Serial Number, typed exactly as it is
+  engraved — 2' 6" or 0.75m — and never converted.
+
+### Changed
+- The walkthrough covers the twist, the single tape width and the lens
+  cards. The twist step sits before the ruler on purpose: the ruler
+  follows the ring, and marking a reversed ring against a normal ruler
+  puts every stop on backwards.
+
 ## 0.14.4 — 2026-09-09
 
 ### Fixed
