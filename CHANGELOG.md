@@ -5,6 +5,34 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.1 — 2026-09-10
+
+### Added
+- **The lens cards are shown before they are written.** A sheet carries
+  the same show name twelve times, so a typo found after the guillotine
+  is a wasted sheet. The card is drawn from the same code that draws the
+  PDF, the name can be edited there and redraws as you type, and it says
+  how many lenses have no close focus typed in — three blank cells in the
+  MF column is worth knowing before the paper is cut.
+- **The shared list shows the iris and the close focus.** The widest stop
+  is read off the marks, so it appears for every ring in the database
+  including ones shared long before the column existed. Close focus
+  travels with a contribution now and comes back when one is adopted.
+
+### Changed
+- **A second measurement of the same lens is a disagreement, not a vote
+  of confidence.** Nobody measures a lens that already has a shared ring
+  unless they think the shared one is wrong — otherwise they would take
+  it. The column is called Remeasured, it is orange, and it says to go
+  and look. The adopt sheet already lines the two up stop by stop, and
+  now says why that is worth reading. It is not always somebody's
+  mistake: tooth pitch differs between motor makers, so the same lens
+  measured against a different motor honestly reads a little off.
+- The count no longer includes you. Every ring with a serial used to tell
+  its own measurer that one person had measured it.
+- The mark count is gone from the shared list. It said how many rows a
+  ring has, which is not a reason to take one or leave it.
+
 ## 0.15.0 — 2026-09-10
 
 ### Added
