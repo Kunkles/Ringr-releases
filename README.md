@@ -190,6 +190,20 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.9 — 2026-09-11
+
+#### Added
+- **Fold a sidebar section away.** Collections, All Lenses and Online
+  Lenses each have a chevron beside the title; click it, or the title,
+  to fold the section up. Ringr remembers which were folded. All Lenses
+  opens again while a search is running, so its answers are never hidden.
+
+#### Changed
+- **Section headings sit at the left edge, with what is in them indented.**
+  Collection folders and the online folders used to poke out further left
+  than the headings they belonged under. A collection's folder now opens
+  or shuts wherever you click on it, as the groups under All Lenses do.
+
 ### 0.15.8 — 2026-09-11
 
 #### Added
