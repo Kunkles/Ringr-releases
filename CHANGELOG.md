@@ -5,6 +5,31 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.7 — 2026-09-10
+
+### Added
+- **A shared ring carries what you placed on it.** Text goes up as
+  typed, with its position, size and angle. Ringr's own logos go up as
+  the name of the file they shipped as — "Caldwell", "Angenieux" — plus
+  where they sit, and never as a picture: every copy of Ringr has the
+  same files, so whoever takes the ring gets the logo from their own
+  copy, in the same place. A logo their copy does not have is left off
+  rather than guessed at. Taking a ring with alignment moves the text
+  and logos along with the stops.
+
+  Images you imported yourself do not go up, and nor do your notes or
+  your printer calibration. **Anything typed onto the ring face does**,
+  so a show or a rental house written there becomes public when the
+  ring is shared. The share dialogs say so.
+
+### Changed
+- A ring you had already shared with text or a logo on it reads as out
+  of date until you share it again, because the copy up there genuinely
+  lacks them. Tick them in the lens list and press Share.
+- Rings with nothing placed on them go up exactly as before, and older
+  copies of Ringr can still read everything — they ignore the new part
+  and take just the stops.
+
 ## 0.15.6 — 2026-09-10
 
 ### Changed
