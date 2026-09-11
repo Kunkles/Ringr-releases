@@ -189,6 +189,34 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.6 — 2026-09-10
+
+#### Changed
+- **Clicking between lenses does less work.** The preview drew the whole
+  ring three times over every time it was shown — once for the picture,
+  once for the zoom that fits it, once for its length — and now draws it
+  once and keeps it until something that affects it changes. The
+  shared-database badges checked every published ring's signature for
+  every row of the list, on every click; that now happens once, when the
+  database is fetched. Measured clicking between lenses in a collection:
+  a little under half the work it was. Some of the delay is the list
+  itself redrawing its rows, and that part is not fixed here.
+
+#### Added
+- **You can see what you are dragging.** Dragging a lens shows a card
+  with its name and mark count, rather than nothing at all until the
+  pointer reached somewhere it could land.
+- **Drop a lens anywhere on an open collection.** Its name, any lens
+  listed in it, the gaps between them, or the "Drag lenses here" line in
+  an empty one — the plus shows the whole way, and the collection's name
+  lights up so you can see which one it is going into. Before, only the
+  name took a drop.
+
+#### Fixed
+- Running the test suite no longer writes imaginary print jobs into the
+  Bluetooth log in your Caches folder — the one file worth reading when a
+  real print goes wrong.
+
 ### 0.15.5 — 2026-09-10
 
 #### Added
