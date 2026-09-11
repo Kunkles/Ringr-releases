@@ -5,6 +5,42 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.8 — 2026-09-11
+
+### Added
+- **Printing over a USB cable.** Plug a P-touch in and it appears in the
+  printer list beside the Bluetooth one — no print queue to set up, no
+  Terminal, no password. It is two-way, so Check Tape, the low-battery
+  guard and the check that a label finished all work over the cable,
+  exactly as over Bluetooth. Proven on a PT-D610BT. macOS no longer
+  allows the kind of print queue the old USB path needed, so on a
+  current Mac it could never have worked; it is kept, as "USB queue",
+  only for anybody who made one before.
+- **One printer, whichever way it is connected.** The same PT-D610BT over
+  Bluetooth and over USB is one printer: its calibration and the ruler
+  you printed on it follow the printer, not the cable.
+- **Debug Mode**, in the Ringr menu. It adds a Test Strip menu beside
+  Print Ring that prints only 20, 40 or 60 mm of the ring, from the end
+  it starts at — for checking a printer, a cable or a layout without a
+  whole ring's worth of tape.
+- **Pinch the preview to zoom** on a trackpad. It drives the same zoom as
+  the slider, and holds whatever is under your fingers where it is.
+
+### Fixed
+- **Short labels feed out and cut.** Every job told the printer it was
+  the *first* page of several rather than the only one, and a PT-D610BT
+  took that literally: it printed the picture, kept it, sat on "Printing,
+  please wait", and cut it at the start of the next job. A whole ring
+  mostly comes out regardless, which hid it; a short strip did not. Now
+  each job is marked as its last page, asks to be cut after every label,
+  and asks the printer to report as it goes. With thanks to DITools'
+  Labelz, whose notes named the cause.
+- **Ringr knows when a label has finished.** It used to wait a guess and
+  then ask — and a short strip, which still has to feed the 24 mm to the
+  cutter, finished after it had stopped listening, so Ringr said the
+  printer "didn't report back". It now listens for the printer saying it
+  is done, over USB and over Bluetooth alike.
+
 ## 0.15.7 — 2026-09-10
 
 ### Added
