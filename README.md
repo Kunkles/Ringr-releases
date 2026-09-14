@@ -190,6 +190,14 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.16 — 2026-09-14
+
+#### Added
+- **Help ▸ Buy Me a Beer…** opens the same code the tour ends on, for
+  anyone who goes looking for it rather than waiting for the last page. A
+  code to point a phone at if you feel like it; the app does not care
+  either way.
+
 ### 0.15.15 — 2026-09-14
 
 #### Changed
