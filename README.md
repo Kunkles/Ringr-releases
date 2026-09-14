@@ -190,6 +190,23 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.10 — 2026-09-11
+
+#### Added
+- **Nudge a logo or a line of text with the arrow keys.** Select it in the
+  preview and press an arrow: half a millimetre a press, a tenth with
+  Option, five with Shift. It stops at the edge of the tape, the same as
+  dragging. A drag gets something roughly in place; this is for the last
+  half millimetre that decides whether a logo sits square.
+- **Masterbuilt** in the list of makes.
+
+#### Changed
+- **A P-touch Ringr hasn't been checked against still prints, and says
+  so.** It is laid out for the standard 128-pin head that every TZe
+  handheld uses, and the printer log now records that assumption instead
+  of making it silently. Nothing is refused on the model a printer
+  reports, because those codes are too loosely documented to trust.
+
 ### 0.15.9 — 2026-09-11
 
 #### Added
