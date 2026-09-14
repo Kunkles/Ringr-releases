@@ -5,6 +5,30 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.11 — 2026-09-14
+
+### Added
+- **Thirteen more makers' logos:** Canon, Laowa, Leitz Cine (the round
+  badge, and the script on its own), Masterbuilt, Nikon, P+S Technik,
+  Schneider, Servicevision, Sigma, Todd-AO, Tokina and Vantage. They
+  appear among your images the next time Ringr opens. An image of your
+  own that happens to share one of those names is never replaced.
+- **Flipping a ring takes its text and logos with it.** Switch Twist
+  between Normal and Reversed and each one moves to the matching spot at
+  the other end, instead of staying put and needing to be dragged two
+  hundred millimetres down the preview. Flipping back puts everything
+  exactly where it was.
+
+### Changed
+- **New images start bigger** — 15 mm across instead of 6, which left
+  most logos a sliver on 18 mm tape. The size slider now reaches the edge
+  of what the tape can print (15.8 mm on 18 mm tape) instead of stopping
+  at 14.
+- **New text lands in the same place every time:** just under the datum,
+  where a lens name goes, rather than wherever the first gap between stops
+  happened to be. On a reversed ring, new text and new images go to the
+  far end, where that ring starts.
+
 ## 0.15.10 — 2026-09-11
 
 ### Added
