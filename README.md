@@ -190,6 +190,23 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.15 — 2026-09-14
+
+#### Changed
+- **The walkthrough is now a tour of the real window.** The window dims and
+  the control being explained stays lit, with a card beside it saying what
+  it is for: Add Lens, Add Next in Set, search, collections, the motor and
+  twist pickers, the marks table and its half-millimetre arrows, Add Text,
+  Add Image, the printer, Print Ruler and Print Ring. Pages about an idea —
+  the tape, marking by hand, what Ringr connects to — keep their drawings.
+  It still opens once, on the first launch, and stays in the Help menu.
+- **The name question is part of the tour**, beside the choices about what
+  Ringr connects to, instead of a separate window straight after it. Leave
+  it empty to stay Anonymous; a name typed there is not sent anywhere until
+  the tour closes.
+- **A first launch with no lenses gets an example lens** for the tour to
+  point at. It is removed when the tour ends, unless you choose to keep it.
+
 ### 0.15.14 — 2026-09-14
 
 #### Fixed
