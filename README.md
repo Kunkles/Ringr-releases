@@ -190,6 +190,14 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.13 — 2026-09-14
+
+#### Changed
+- **The window stops shrinking at 1175 × 752.** Any smaller and the text
+  and logo controls, the print bar and the marks table no longer all fit,
+  so parts of them were cut off. It can still be made as large as you
+  like.
+
 ### 0.15.12 — 2026-09-14
 
 #### Added
