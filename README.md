@@ -190,6 +190,16 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.17 — 2026-09-14
+
+#### Added
+- **Every ring now carries its serial and motor**, printed small across the
+  tape right on the seam line: "AP00148 · H" for a Heden, "· P" for a
+  Preston. Once a tape is on a lens it is the only record left, and a ring
+  marked on one maker's motor looks exactly like one marked on the other's.
+  It never makes a strip longer. On by default; Style ▸ Tape ▸ Print the
+  Serial and Motor at the End turns it off for a ring.
+
 ### 0.15.16 — 2026-09-14
 
 #### Added
