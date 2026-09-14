@@ -5,6 +5,27 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.12 — 2026-09-14
+
+### Added
+- **Share or update a whole group of lenses at once.** Right-click a
+  maker, a type or a model under All Lenses for "Share 6 Lenses in
+  Caldwell…" or "Update 2 Shared Copies in Caldwell…". Every lens under
+  the group is included, whether its folder is open or not. Update covers
+  shared copies you have changed since sharing, and skips ones already
+  current. Anything short of a detail a shared ring needs is named in the
+  confirmation rather than uploaded half-filled.
+- **Text and logos at either end of the strip.** A Start | End switch,
+  beside the position of whatever is selected, moves it to the matching
+  spot at the other end of the tape. New text and logos land wherever you
+  chose last, so it only has to be set once. Start is where the ring
+  begins: the datum on a normal ring, the far end on a reversed one.
+
+### Fixed
+- **Selecting a logo far down the strip scrolls to it.** The preview went
+  to the top of the strip whatever was selected, so anything placed near
+  the far end had to be found by hand.
+
 ## 0.15.11 — 2026-09-14
 
 ### Added
