@@ -190,6 +190,15 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.14 — 2026-09-14
+
+#### Fixed
+- **Ringr remembers its window size and position.** It opens where and
+  how big you last left it, including after an update — some updates used
+  to put the window back at its default size. A first launch opens at
+  1207 × 882. A window last left on a display that is no longer connected
+  opens on the screen you have instead of somewhere you cannot see.
+
 ### 0.15.13 — 2026-09-14
 
 #### Changed
