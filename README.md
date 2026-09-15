@@ -190,6 +190,20 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.18 — 2026-09-15
+
+#### Changed
+- **The serial and motor code can be moved.** It is listed with your text
+  and logos: select it and drag it on the preview, or nudge it with the
+  arrow keys. Until it is moved it stays on the seam line and follows it;
+  Back on the Seam Line puts it there again. Its words always come from
+  the lens, so correcting a serial corrects the code, and it never goes up
+  with a shared ring.
+- **Moved text or logos are a cosmetic change, not out of date.** A shared
+  ring whose stops are unchanged now says "cosmetic changes" instead of
+  "out of date" — a ring printed from the shared copy still lands on the
+  right stops. Update Shared Copy sends the new layout either way.
+
 ### 0.15.17 — 2026-09-14
 
 #### Added
