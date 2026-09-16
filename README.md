@@ -190,6 +190,37 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.20 — 2026-09-16
+
+#### Changed
+- **The lens name prints inside the ring, along the tape.** It used to print
+  in the lead-in — the blank tape cut off when the ring goes on the lens —
+  so it was ink nobody would ever read. It now starts inside the ring, on
+  the edge away from the ticks, in the first stretch of tape clear of the
+  numerals, the ticks, the datum and seam lines, your logos and the serial
+  code. On a ring with stops all the way down it is set smaller rather than
+  printed over one, but never smaller than the code prints at.
+- **The name is the make and the model** — "Caldwell Chameleon". It used to
+  add the focal length and the serial as well, which are already on the
+  tape: the focal length is what Add Text starts with, and the serial is in
+  the code at the seam. Turned across the tape a name that long shrinks to
+  about five dots tall, which is the smudge that gave this away.
+- **The name is a placed item like the serial code.** Drag it, nudge it with
+  the arrow keys, resize it, or Turn it to 90° to read across the tape the
+  old way. Back to the Start puts it back. It never travels with a shared
+  ring, since the make and model go as fields anyway.
+
+#### Fixed
+- **Text set along the tape is no longer shrunk to fit across it.** Any line
+  of text turned lengthwise was sized as though it had to fit an 18 mm tape
+  edge to edge, so it came out far smaller than asked for.
+- **The box you grab text by now lies the way the text does.** It was always
+  shaped as though text were turned across the tape, so around a lengthwise
+  line it sat at right angles to the words. The warning about printing over
+  a stop now covers the tape the text really covers.
+- **Style says when a name is too small to read** rather than printing a
+  smudge.
+
 ### 0.15.19 — 2026-09-15
 
 #### Changed
