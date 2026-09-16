@@ -190,6 +190,17 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.19 — 2026-09-15
+
+#### Changed
+- **Ringr now tells the sharing service which version is asking** —
+  the version, the build and the macOS, and nothing that identifies the
+  Mac or the person. A release nobody installed looked exactly like a
+  release everybody installed, so there was no way to tell whether a fix
+  had reached the people it was for. The service keeps a daily count per
+  version and nothing else: no identifier, and no record of who was
+  working when.
+
 ### 0.15.18 — 2026-09-15
 
 #### Changed
