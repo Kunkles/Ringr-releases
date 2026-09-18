@@ -190,6 +190,22 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.21 — 2026-09-17
+
+#### Added
+- **A P-touch Ringr doesn't recognise is asked what it is.** Plug one in and
+  Ringr sends it the same status question the tape check uses, then says so
+  in the print bar: the printer still prints, laid out for the standard
+  128-pin head, and what it said about itself can be sent so the model gets
+  measured and supported properly. Show Report prints the whole thing first,
+  and the answer is remembered — No Thanks is final, on this Mac, for every
+  printer.
+- The report carries the model code, the USB product name and revision, the
+  raw status reply, and the tape that was loaded. It carries no serial
+  number — the USB serial is read to find the printer and deliberately
+  dropped — nothing about your lenses, no name and no identifier. A
+  Bluetooth name has the serial digits Brother appends trimmed off.
+
 ### 0.15.20 — 2026-09-16
 
 #### Changed
