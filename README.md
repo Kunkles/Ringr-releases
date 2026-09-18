@@ -190,6 +190,19 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.24 — 2026-09-18
+
+#### Added
+- **Ringr asks what a tape is when the printer can't say.** Every printer
+  reports the kind of tape loaded as a number, and only six of those
+  numbers are documented — a PT-P710BT reports one that isn't, so the tape
+  check could only call it "Unknown (0x14)". Load a tape like that and Ringr
+  now asks for the name on the cassette, like TZe-FX231. It calls the tape
+  that from then on, on this Mac, whether or not you pass the answer on —
+  Save Here Only keeps it local, Save & Send tells the shared database so
+  nobody else has to be asked. Asked once per tape per printer, and never
+  if you have turned printer reports down.
+
 ### 0.15.23 — 2026-09-18
 
 #### Fixed
