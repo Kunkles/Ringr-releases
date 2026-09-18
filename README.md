@@ -8,6 +8,13 @@ Brother P-touch.
 **[Download Ringr](../../releases/latest/download/Ringr.zip)** · macOS 14
 or later · free · [all releases](../../releases/latest)
 
+![The Ringr window: lenses on the left, the marks you measured in the
+middle, the strip as it will print on the right](docs/window.png)
+
+*One window. The lens list files itself, the middle column is what you
+read off the ruler, and the right-hand strip is exactly what comes out of
+the printer.*
+
 ---
 
 ## The problem it solves
@@ -70,6 +77,12 @@ reading was a hair off.
 spaced, so every intermediate tick is a reading you took, not a number
 the app worked out.
 
+![The marks table: a position in millimetres, an f-stop where there is
+one, and whether the mark is a stop or a plain tick](docs/marks.png)
+
+*Stops carry a number, ticks do not. The footer keeps the count and how
+far the marks reach around the ring.*
+
 ### Labels and logos
 
 Add text or an image to a ring and drag it where it belongs — the focal
@@ -79,7 +92,16 @@ has landed on top of a stop.
 Imported images are turned into the black and white a thermal head can
 actually print: one threshold slider decides how much becomes ink, and
 transparent stays paper. White-on-clear logos are brought in inverted so
-they print at all. **Eleven manufacturers' logos are already included.**
+they print at all. **Twenty-five manufacturers' logos are already
+included.**
+
+![The strip with a logo, a focal length, the lens name and the serial
+code placed on it](docs/labels.png)
+
+*Everything placed on the ring is listed above the preview and outlined
+on it. The last two look after themselves: the lens name and the serial
+and motor code read straight off the lens, and can be dragged anywhere
+you want them.*
 
 ### Printing
 
@@ -93,7 +115,14 @@ and every ring after that is corrected for that printer.
 Developed against a **PT-D610BT**, over Bluetooth or a USB cable. Over
 USB Ringr talks to the printer directly — there is no print queue to set
 up — and it checks the tape and confirms the finish exactly as it does
-over Bluetooth.
+over Bluetooth. A P-touch Ringr has not met before still prints, and is
+asked what it is so the model can be supported properly.
+
+![The print bar: the printer, the quality, what the link is doing, and
+Print Ruler beside Print Ring](docs/printing.png)
+
+*The ruler and the ring come off the same printer at the same scale,
+which is what makes the numbers on the ring true.*
 
 ### Backup
 
@@ -134,6 +163,13 @@ for Bluetooth the first time; that is the printer.
 
 The app is signed with a Developer ID certificate and notarised by
 Apple, so it opens without warnings and without a network connection.
+
+![The first run: the window dimmed, with one control lit and a card
+explaining it](docs/first-run.png)
+
+*The first launch walks through the real window, one control at a time.
+It is in the Help menu afterwards, and the page about what Ringr may
+talk to is a choice, not an announcement.*
 
 ---
 
