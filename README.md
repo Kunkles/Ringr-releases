@@ -190,6 +190,18 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.22 — 2026-09-17
+
+#### Fixed
+- **The PT-P710BT is recognised properly.** The first printer report sent
+  through 0.15.21 was a PT-P710BT, and it reports model code 0x76 — not the
+  0x6F that is quoted for it nearly everywhere. Ringr now knows 0x76, and
+  0x6F has been taken out of the table: whatever it is, it is not a
+  PT-P710BT, and one published source calls it a PT-P900W, which carries a
+  wide head rather than the 128-pin one. A printer reporting 0x6F now asks
+  rather than being assumed. Nothing is refused either way — an unknown
+  printer still prints.
+
 ### 0.15.21 — 2026-09-17
 
 #### Added
