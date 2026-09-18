@@ -190,6 +190,17 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.23 — 2026-09-18
+
+#### Fixed
+- **A printer plugged in while Ringr is open is noticed straight away.** The
+  printer list was only rebuilt when something asked for it — at launch, from
+  the refresh button, from the Printers menu — so plugging a P-touch in with
+  the window already open did nothing at all: it was not in the list, and a
+  model Ringr has no measurements for was never asked what it was. It now
+  appears on its own, and is asked about a moment after macOS finishes
+  setting it up.
+
 ### 0.15.22 — 2026-09-17
 
 #### Fixed
