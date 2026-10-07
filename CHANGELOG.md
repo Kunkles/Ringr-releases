@@ -5,6 +5,16 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.25 — 2026-10-07
+
+### Fixed
+- **The PT-D460BT is recognised**, from a report sent by somebody who
+  plugged one in. It reports model code 0x7B, which is in none of the
+  published tables. Nothing about printing changes — it was already being
+  laid out for the 128-pin head every TZe handheld carries, and its own
+  status reply confirms that — but the tape check now names it, and it
+  stops asking its owner about it.
+
 ## 0.15.24 — 2026-09-18
 
 ### Added
