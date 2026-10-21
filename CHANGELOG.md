@@ -5,6 +5,18 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.27 — 2026-10-21
+
+### Fixed
+- **Check Tape answers straight away again.** Since 0.15.21 Ringr asked
+  every two-way printer what it was whenever the printer list refreshed,
+  paired Bluetooth printers that are switched off included — and each of
+  those takes seconds to give up, one after another, with Check Tape
+  waiting behind them. With two paired printers switched off, the first
+  check after launch sat on "Waking the printer…" for half a minute. Ringr
+  now asks only printers that are actually connected, and asks a skipped
+  one as soon as it turns up.
+
 ## 0.15.26 — 2026-10-21
 
 ### Fixed
