@@ -5,6 +5,16 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.26 — 2026-10-21
+
+### Fixed
+- **The PT-D600 is recognised**, from a report somebody sent after plugging
+  one in. It reports model code 0x6A, which is in none of the published
+  tables. Nothing about printing changes: it takes tape up to 24 mm, but
+  the whole TZe family shares one 128-pin head — 18 mm uses the middle 112
+  pins and 24 mm uses all of them — and Ringr lays out 18 mm either way.
+  The tape check now names it, and it stops asking its owner about it.
+
 ## 0.15.25 — 2026-10-07
 
 ### Fixed
