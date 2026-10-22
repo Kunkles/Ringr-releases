@@ -195,12 +195,36 @@ ruler is clean for the next lens.
 
 ---
 
+## If something goes wrong
+
+**Help ▸ Report a Problem…** — a box to say what happened and what you
+expected instead. An email address is optional, and only worth giving if
+you want an answer; there is otherwise no way to write back.
+
+Sent with it: the Ringr and macOS versions, the printer in use and what
+it last said, how many lenses are in your library, and the last few lines
+of the printer log unless you take them out. All of it is listed in the
+window before any of it goes, and **nothing about your lenses travels
+except how many there are.**
+
+It is the only way to tell anybody. A ring that measures wrong, or a
+printer that sits there doing nothing, gets fixed because somebody said
+so — the Check Tape hang in 0.15.27 shipped for three weeks because
+nobody could.
+
+---
+
 ## Known gaps
 
-- **One printer model, proven.** Everything has been printed on a
-  PT-D610BT, over Bluetooth and over USB. Other P-touch models in the same
-  family should work — Check Tape and a test strip in Debug Mode will say
-  — but none has been tried yet.
+- **One printer model, proven by printing.** Everything has been printed
+  on a PT-D610BT, over Bluetooth and over USB. The PT-P710BT, PT-D460BT
+  and PT-D600 have since identified themselves from other people's Macs,
+  so Ringr knows them and lays out for the 128-pin head they all carry —
+  but nobody has yet confirmed that a ring printed on one measured right
+  against the ruler. Check Tape and a test strip in Debug Mode will say.
+- **Nobody has adopted a shared ring yet.** Rings can be published and
+  found, and the half where somebody takes one, prints it and confirms it
+  matched has been used by exactly one person.
 
 ---
 
