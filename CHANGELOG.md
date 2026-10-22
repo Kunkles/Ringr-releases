@@ -5,6 +5,14 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.29 — 2026-10-21
+
+### Changed
+- **The walkthrough says there is somewhere to report a problem**, near the
+  end, with what the report carries and what it leaves out. The front page
+  says it too. A way to tell somebody that nobody knows about collects
+  nothing.
+
 ## 0.15.28 — 2026-10-21
 
 ### Added
