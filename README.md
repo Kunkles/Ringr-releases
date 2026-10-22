@@ -226,6 +226,17 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.28 — 2026-10-21
+
+#### Added
+- **Help ▸ Report a Problem…** — a box to say what went wrong, and what you
+  expected instead. An email address is optional and only worth giving if
+  you want an answer; there is otherwise no way to write back. Sent with it:
+  the Ringr and macOS versions, the printer in use and what it last said,
+  how many lenses are in your library, and the tail of the printer log
+  unless you take it out. All of it is listed in the window before any of it
+  goes, and nothing about your lenses travels except how many there are.
+
 ### 0.15.27 — 2026-10-21
 
 #### Fixed
