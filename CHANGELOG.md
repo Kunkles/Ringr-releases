@@ -5,6 +5,46 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.30 — 2026-10-25
+
+### Added
+- **Read from Photo**, in the marks toolbar: the stops read off a photograph
+  of a marked tape, for when there is no time to mark up a measuring ring.
+  Put tape on the lens ring, mark it by hand, peel it off, lay it beside a
+  Ringr ruler and take one photograph from overhead. The photograph is shown
+  straightened, with zero at the top and the ruler down one side. Click the
+  first mark you drew and the whole row is read. Each mark found gets a red
+  line running across the ruler, so you can see where it lands on the scale.
+- **Put right what the reading got wrong.** Add Mark, then click where a
+  missed mark is; Remove Mark, then click one that is not a mark. The
+  pointer turns into a plus or a minus so the mode is obvious. Any single
+  mark moves half a millimetre at a time, Shift All Marks moves every one
+  together to line the tape up with the ring, and *Marks run the other way*
+  turns them round for a tape laid down from the ruler's far end.
+- **A code at each end of the ruler.** It says which ruler this is, how long
+  it is, which way round it runs and which end is zero, so a photograph of
+  it needs no setting up. A reversed ruler is recognised as reversed and
+  read in the numbers printed on it.
+- **A tour of the reading sheet**, lighting each control in turn. The click
+  on the first mark is part of it, and the tour moves on by itself once the
+  marks are read. It opens the first time a photograph is read and stays
+  behind *How This Works*. The main walkthrough has a page about it too.
+
+### Changed
+- **Rulers take 15.5 mm more blank tape at each end**, which is where the
+  codes go.
+
+### Before you rely on it
+- **Print a new ruler for this.** Rulers printed by earlier versions carry no
+  codes and cannot be read off a photograph. They still work, as always, for
+  marking by hand and typing the readings in.
+- **Both codes have to be in the photograph**, whole. With one, Ringr cannot
+  place the far end, and says so rather than guessing.
+- **Print the ruler the way round you usually work, or keep one of each.**
+  Which way a ring closes down depends on the DP. A normal ruler and a
+  reversed one in the kit cover both, and a photograph of either reads
+  correctly, because its code says which it is.
+
 ## 0.15.29 — 2026-10-21
 
 ### Changed
