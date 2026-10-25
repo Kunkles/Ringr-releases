@@ -91,7 +91,9 @@ tell it which ruler it is (its length, which way round it runs, which end
 is zero), so there is nothing to set. It shows the bench straightened, with
 a line from each mark across the ruler so you can see where it lands. One
 it missed can be added with a click and one it should not have found
-removed. Labels are typed afterwards, since no photograph knows the f-stops.
+removed. Type the f-stops beside each mark as you go, or leave them for
+later. The photograph is kept with the lens, and in backups, in case you
+ever need to look at it again.
 
 ### Labels and logos
 
@@ -264,6 +266,23 @@ Ringr prints marking rings for Preston iris hand units.
 
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
+
+### 0.15.31 — 2026-10-25
+
+#### Added
+- **Type the f-stops while reading the photo.** Each mark in the reading
+  sheet has a field for its stop, so stops written on the tape can be copied
+  across while it is in front of you. Blank is fine; the editor takes them
+  later. While you type, that mark's line on the picture turns yellow, so
+  you can see which mark you are on.
+- **The photo is kept with the lens.** Once a reading's marks are used, a
+  small copy of the photograph is saved with the lens, for the day somebody
+  asks why a stop sits where it does. **Scan Photo** in the marks toolbar
+  opens it. A newer scan replaces the last. It stays on this Mac and is never
+  sent to the shared lens database.
+- **Backups carry the photos.** A `.ringr` backup includes each lens's scan,
+  and restoring it on another Mac puts the photo back. Older backups still
+  open as before.
 
 ### 0.15.30 — 2026-10-25
 
