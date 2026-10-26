@@ -5,6 +5,16 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.36 — 2026-10-26
+
+### Fixed
+- **PT-P710BT: still not printing.** 0.15.34 removed one command it would
+  not take, and it still took the job in silence and never started. It is
+  now sent exactly the job another app is known to have printed on a
+  PT-P710BT: 180 × 180, and print settings that check only the tape width,
+  not its type. A fine-quality job is switched to 180 × 180 before anything
+  is sent, and Ringr says so. Switch the printer off and on once first.
+
 ## 0.15.35 — 2026-10-26
 
 ### Fixed
