@@ -284,6 +284,18 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.38 — 2026-10-26
+
+#### Fixed
+- **Over USB, the whole job is sent at once, the way Brother's software
+  sends it.** Ringr used to spread a job out over several seconds, with
+  pauses of up to a second, to match the pace the tape prints at. That is
+  needed over Bluetooth, where a printer's buffer can overflow, and still
+  happens there. Over USB it gained nothing, and it was one of the last
+  ways Ringr's job still differed from Brother's for the PT-P710BT.
+- **A wrong "it printed" in one alert.** When Quality was switched to
+  180 × 180 and the print then failed, the alert still said it printed.
+
 ### 0.15.37 — 2026-10-26
 
 #### Fixed
