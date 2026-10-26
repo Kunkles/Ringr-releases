@@ -95,6 +95,23 @@ removed. Type the f-stops beside each mark as you go, or leave them for
 later. The photograph is kept with the lens, and in backups, in case you
 ever need to look at it again.
 
+### Matching lenses
+
+Some lenses in a set share one iris scale — a few of them, or the whole
+set. Once you know they match, from the rental house or because you
+tested them, say so under **Matching** in the lens, or right-click a set
+for **Set Lenses as Matching**. Matching lenses share one set of marks:
+fix a stop on one and it is fixed on all of them. Each keeps its own
+focal length, serial and label, and prints its own ring.
+
+**Ringr never decides two lenses match.** Before linking it shows how far
+anybody's stops would move, so a lens that was marked wrong, or that does
+not belong, stands out, but the call is yours.
+
+**It travels with what you share.** A shared ring says which others it
+matches, and taking one offers to take the rest of its matching lenses
+too, lined up the same way.
+
 ### Labels and logos
 
 Add text or an image to a ring and drag it where it belongs — the focal
@@ -266,6 +283,27 @@ Ringr prints marking rings for Preston iris hand units.
 
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
+
+### 0.15.33 — 2026-10-26
+
+#### Added
+- **Matching lenses.** Some lenses in a set share one iris scale — a few
+  of them, or the whole set. Say which under **Matching** in the lens, or
+  right-click a set for **Set Lenses as Matching**. Matching lenses share
+  one set of marks: change a stop on one and it changes on all of them,
+  and one undo takes it back off all of them. Each keeps its own focal
+  length, serial and label, and prints its own ring. Before linking, Ringr
+  shows how far anybody's stops would move, but it never decides for you
+  that two lenses match.
+- **The shared lens database knows about matching.** A ring you share
+  says which of your other shared rings it matches. The shared rings table
+  has a **Matches** column, and taking a ring offers to take its matching
+  lenses too, lined up the same way.
+
+#### Fixed
+- **Your Lenses could not be closed with lenses ticked.** With lenses
+  picked, the extra buttons could crowd **Done** out of the window. The
+  count now gives way instead, and **Done** stays put.
 
 ### 0.15.32 — 2026-10-25
 

@@ -5,6 +5,27 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.33 — 2026-10-26
+
+### Added
+- **Matching lenses.** Some lenses in a set share one iris scale — a few
+  of them, or the whole set. Say which under **Matching** in the lens, or
+  right-click a set for **Set Lenses as Matching**. Matching lenses share
+  one set of marks: change a stop on one and it changes on all of them,
+  and one undo takes it back off all of them. Each keeps its own focal
+  length, serial and label, and prints its own ring. Before linking, Ringr
+  shows how far anybody's stops would move, but it never decides for you
+  that two lenses match.
+- **The shared lens database knows about matching.** A ring you share
+  says which of your other shared rings it matches. The shared rings table
+  has a **Matches** column, and taking a ring offers to take its matching
+  lenses too, lined up the same way.
+
+### Fixed
+- **Your Lenses could not be closed with lenses ticked.** With lenses
+  picked, the extra buttons could crowd **Done** out of the window. The
+  count now gives way instead, and **Done** stays put.
+
 ## 0.15.32 — 2026-10-25
 
 ### Fixed
