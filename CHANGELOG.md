@@ -5,6 +5,17 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.32 — 2026-10-25
+
+### Fixed
+- **A security fix for importing backups. Please update.** A `.ringr` file
+  made on purpose to do it could make an import overwrite or delete a file
+  outside Ringr's own folder. Backups that Ringr wrote itself never did
+  this; it took a deliberately crafted file. Images in a backup can now
+  only ever be written inside Ringr's own image folder, whatever the file
+  says. Until you have updated, only import backups you made yourself or
+  got from somebody you trust.
+
 ## 0.15.31 — 2026-10-25
 
 ### Added
