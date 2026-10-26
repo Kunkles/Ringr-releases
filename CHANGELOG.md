@@ -5,6 +5,28 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.37 — 2026-10-26
+
+### Fixed
+- **PT-P710BT: sent the job Brother's own software sends it.** Ringr's jobs
+  are now checked against the ones Brother's Print SDK (inside P-touch
+  Editor) builds for each model. For the P710BT that turned up one byte
+  that Brother itself changes by model: a one-label job is marked as the
+  *first* page on the P710BT, where the D610BT is told it is the *last*.
+  Ringr was telling every printer "last", and a P710BT that hears that may
+  wait for a first page that never comes. That fits what it did, though it
+  is not yet confirmed on one. The P710BT's job now matches Brother's byte
+  for byte, compression and command order included, and fine quality
+  (180 × 360) is allowed again, because Brother prints it. Switch the
+  printer off and on once first.
+- **The same page byte on other models.** The PT-D600, PT-E550W and PT-P750W
+  are first-page models too, and are now told so. Nothing changes for the
+  PT-D610BT or PT-D460BT.
+- **PT-D600: fine quality could print rings twice as long.** Brother's software
+  never prints the D600 at 180 × 360, so Ringr doesn't either. A fine job is
+  caught before anything is sent, Quality switches to 180 × 180, and Ringr
+  says so, as it already does for the D460BT.
+
 ## 0.15.36 — 2026-10-26
 
 ### Fixed
