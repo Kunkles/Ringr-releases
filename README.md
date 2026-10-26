@@ -284,6 +284,19 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.35 — 2026-10-26
+
+#### Fixed
+- **PT-D460BT: fine quality could print rings twice as long.** Brother lists
+  only 180 × 180 for this model, and Ringr's default is 180 × 360. A fine
+  job is now caught before anything is sent: Quality switches to 180 × 180,
+  the job prints at that, and Ringr says so.
+- **PT-D600: every USB print could have been called "never started".**
+  0.15.34 began treating a USB printer that never reports starting as one
+  that did not print. Brother's driver data suggests the D600 has no
+  progress reports at all, so it is no longer asked for them or held to
+  them, the same as the PT-E550W and PT-P750W.
+
 ### 0.15.34 — 2026-10-26
 
 #### Fixed
