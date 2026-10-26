@@ -5,6 +5,26 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.15.34 — 2026-10-26
+
+### Fixed
+- **PT-P710BT: printing hung the printer.** Its light would blink, nothing
+  printed, Ringr said the label had printed anyway, and the printer had to
+  be switched off and on. Ringr was sending blank lines in a short form
+  that Brother's manual allows only for compressed jobs. The D610BT let it
+  pass; the P710BT does not. Blank lines are now sent in full. Switch the
+  printer off and on once after updating.
+- **A print that never started is no longer called printed.** Over USB a
+  printer says when it starts; one that took the job, said nothing and went
+  back to ready printed nothing. Ringr now says so and tells you to switch
+  the printer off and on, rather than reporting the label as printed.
+- **Two commands are no longer sent to printers that do not have them.**
+  Brother's manual says the PT-E550W and PT-P750W have no status
+  notifications, and the PT-P710BT has no "cut every N labels" setting.
+  Neither is sent to those models any more.
+- **Print Ruler says it is printing.** It used to just go grey for the
+  minute a job takes, which looked like a button that would not work.
+
 ## 0.15.33 — 2026-10-26
 
 ### Added
