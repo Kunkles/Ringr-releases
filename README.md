@@ -284,6 +284,22 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.39 — 2026-10-27
+
+#### Fixed
+- **Reading a photo no longer finds marks that aren't there.** A user's
+  hand-marked cloth tape read all of its real stops, plus a few that were
+  never drawn:
+  - **A mark on the bench past each end of the tape.** When you click a
+    row of marks, Ringr reads the whole length of the ruler, so the wood
+    beyond a tape shorter than the ruler was read too. Ringr now works out
+    where the tape starts and stops, and ignores anything off it.
+  - **A mark at every grey smudge.** One tape is marked with one pen, so
+    real stops come out about equally black. A thumbprint on cloth comes
+    out grey, and is no longer counted. A thin real mark in a
+    low-resolution photo still counts, even though the blur makes it look
+    grey.
+
 ### 0.15.38 — 2026-10-26
 
 #### Fixed
