@@ -284,6 +284,26 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.42 — 2026-10-29
+
+#### Added
+- **Speak Marks.** Say each stop and where it is: "2 is at 10 mm, 2.8 is
+  at 40 mm". Ringr lists each mark as you say it, each with a checkbox.
+  Nothing reaches the ring until you press Add.
+  - Stops come in the way they're said on set: "five six", "two point
+    eight", "T2.8". So do places: "forty", "one fifteen", "fifty nine and
+    a half". "Tick at 25" adds a mark with no number.
+  - Said at a mark already on the ring (say, one read off a photo), a stop
+    names that mark instead of adding another.
+  - What was heard is shown as words you can correct by typing.
+  - Ticks between the stops are added only if you choose Halves or Thirds.
+    It starts at None every time.
+  - **Or from a recording.** Open Recording… (or drag a file onto the
+    sheet) reads the marks out of a voice memo or any audio file. For
+    example, one made on your phone next to the camera.
+  - Speech is recognised on your Mac, never sent anywhere. The first time,
+    macOS asks to allow the microphone and speech recognition.
+
 ### 0.15.41 — 2026-10-29
 
 #### Added
