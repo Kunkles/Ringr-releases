@@ -284,6 +284,23 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.40 — 2026-10-29
+
+#### Added
+- **Stops written on a tape are read for you.** If you wrote the stop
+  beside each mark, the f-stop boxes in the photo sheet now fill in
+  by themselves a second or two after the marks appear. They show in blue
+  until you type over one, so you can see which you haven't checked.
+  - Handwriting reads roughly. An "11" can come back as "II", or a "16" as
+    "Ib", so Ringr doesn't trust any single number. It finds the run of
+    standard stops (whole, half or third stops, either way along the tape)
+    that agrees with most of what it read, and uses that run for the ones
+    it couldn't read.
+  - Ticks with nothing written beside them stay blank, and notes on the
+    tape, such as a lens's name, are ignored.
+  - If fewer than two stops can be read, the boxes stay empty for you to
+    type, as before.
+
 ### 0.15.39 — 2026-10-27
 
 #### Fixed
