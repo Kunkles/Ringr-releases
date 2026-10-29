@@ -284,6 +284,37 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.15.41 — 2026-10-29
+
+#### Added
+- **Copy and paste text and images on a ring.** Select one and use Copy,
+  or Duplicate (⌘D). Paste shows up once something is copied, on any ring.
+  Each copy goes in the widest clear stretch between stops, so duplicating
+  a focal length a few times spreads it down the ring. Then you can read
+  it whatever stop the lens is set to.
+- **Any font on your Mac.** Every piece of text has a font menu, with the
+  family's styles (bold, condensed and so on) in a submenu. Style's
+  numeral font uses the same menu. If a ring was shared from a Mac with a
+  font yours doesn't have, it prints in the ring's font.
+- **Removing several marks at once.** The photo sheet has Select All,
+  Remove Selected, Put Back Selected, Remove All and Keep All. Shift- or
+  ⌘-click marks in the list and press Delete.
+- **A line at zero.** Draw a line at the top of the tape where the ring's
+  zero is, before marking any stops. First Mark Is Zero then puts that
+  line at 0 and leaves it off the ring. The help guide now says to do
+  this.
+- **Telling us when the printer has the tape wrong.** Third-party
+  cassettes are often read as another width, as "incompatible", or as no
+  tape at all. Ringr now asks when the printer calls a tape incompatible
+  or gives a width no TZe tape has. A "Tape not what's loaded? Tell us"
+  link under the tape check does the same whenever you like. Say what's
+  really loaded (the name, the real width, whether it's third-party, what
+  went wrong) and it's sent to us, with nothing that identifies you.
+
+#### Changed
+- The text controls are on three rows, so the bar no longer runs off the
+  sides of a narrow window.
+
 ### 0.15.40 — 2026-10-29
 
 #### Added
