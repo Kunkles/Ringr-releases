@@ -284,6 +284,31 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+### 0.16.0 — 2026-10-30
+
+#### Added
+- **3D-printed rings.** Export 3D Ring (in the print bar) makes a Preston
+  single-channel ring with the tape's ticks, numerals and text wrapped
+  round its face, ready for a 3D printer.
+  - The notch is zero, and the tick edge is at the open end.
+  - The marks are set into the ring, never raised: an upright wall can't
+    print the overhangs under raised lettering.
+  - **Two Colours, Marks Flush…** fills them in a second filament, level
+    with the face. **One Colour, Marks Engraved…** leaves them cut in, with
+    no filament changes.
+  - **Use My Bambu Settings** puts the ring into a project you saved from
+    Bambu Studio, with your printer, filaments and process, so it opens
+    ready to slice.
+  - Logos aren't printed. Anything the notch would cut through is listed
+    when you export.
+  - Two colours change filament on almost every layer, so expect about
+    three hours on a Bambu X1C, against under half an hour for one.
+
+#### Fixed
+- **Speak Marks** no longer drops a phrase after a long one in a
+  recording, and reads two marks said without a pause ("one sixty four
+  two point eight") as two.
+
 ### 0.15.42 — 2026-10-29
 
 #### Added
