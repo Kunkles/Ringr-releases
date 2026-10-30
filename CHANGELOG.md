@@ -5,6 +5,12 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.16.1 — 2026-10-30
+
+### Fixed
+- **Export 3D Ring** no longer says "The marks couldn't be set into the
+  ring's face" for a ring whose reference code sits beside the notch.
+
 ## 0.16.0 — 2026-10-30
 
 ### Added
