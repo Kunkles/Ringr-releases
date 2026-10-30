@@ -5,6 +5,17 @@ Ringr prints marking rings for Preston iris hand units.
 Versions are dated from the work, not from releases — this has been in
 daily use since the first one. The build number is the commit count.
 
+## 0.16.2 — 2026-10-30
+
+### Changed
+- **Words on a 3D-printed ring are bigger, and none sit in the notch.**
+  Only the printed ring changes; tapes print as before.
+  - Text the notch would cut, like the focal length, goes under the notch
+    and reads round the ring. Where the stops beside the notch are too close
+    for that, it stays reading up the ring and moves down out of the notch.
+  - The make and model go on two lines, and the serial reads round the
+    ring, each in the clearest stretch between stops.
+
 ## 0.16.1 — 2026-10-30
 
 ### Fixed
